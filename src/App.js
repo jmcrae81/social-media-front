@@ -1,26 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import LoginComponent from './LoginComponent';
-import RegistrationComponent from './RegistrationComponent';
-import HomepageComponent from './HomepageComponent';
-import NavbarComponent from './NavbarComponent';
-import ManageProfileComponent from './ManageProfileComponent';
-import FindFriendsComponent from './FindFriendsComponent';
-import FriendsComponent from './FriendsComponent';
+import React from 'react';
+import LoginComponent from './components/LoginComponent';
+import DashboardComponent from './components/DashboardComponent';
+import RegistrationComponent from './components/RegistrationComponent';
+
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-        <div className="app">
-            <NavbarComponent/>
-        </div>
         <Routes>
-            <Route path="/find" element={ <FindFriendsComponent/>} />
-            <Route path="/manage" element={<ManageProfileComponent/>} />
-            <Route path="/friends" element={ <FriendsComponent/>} />
-            <Route path="/home" element={<HomepageComponent/>} />
-
+             <Route path="/" element={<LoginComponent />} />
+             <Route path="/login" element={<LoginComponent />} />
+             <Route path="/dashboard" element={<DashboardComponent />} />
+             <Route path="register" element={<RegistrationComponent />} />
         </Routes>
     </Router>
   );
