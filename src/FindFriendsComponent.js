@@ -1,7 +1,7 @@
 const FindFriendsComponent = () => {
     return(
         <div style={{textAlign: "center"}}>
-           <h1>Do you have friends to find? </h1>
+           <h1>Search on this page </h1>
         </div>
     );
 }

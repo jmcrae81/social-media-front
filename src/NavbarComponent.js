@@ -9,7 +9,8 @@ const NavbarComponent = () => {
             <br/>
             <Link to="/manage">Manage Profile</Link>
             <br/>
-            <Link to="/">Current Friends</Link>
+            <Link to="/friends">Current Friends</Link>
+            <br/>
             <br/>
             <Link to="/home">Homepage</Link>
         </div>

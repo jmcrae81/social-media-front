@@ -6,6 +6,7 @@ import HomepageComponent from './HomepageComponent';
 import NavbarComponent from './NavbarComponent';
 import ManageProfileComponent from './ManageProfileComponent';
 import FindFriendsComponent from './FindFriendsComponent';
+import FriendsComponent from './FriendsComponent';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -17,7 +18,9 @@ function App() {
         <Routes>
             <Route path="/find" element={ <FindFriendsComponent/>} />
             <Route path="/manage" element={<ManageProfileComponent/>} />
+            <Route path="/friends" element={ <FriendsComponent/>} />
             <Route path="/home" element={<HomepageComponent/>} />
+
         </Routes>
     </Router>
   );
