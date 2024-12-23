@@ -1,14 +1,17 @@
 import './Navbar.css';
+import {Link} from "react-router-dom"
 
 const NavbarComponent = () => {
     return(
         <div class="sidebar">
             <p>Links will be over here</p>
-            <a>Find Friends</a>
+            <Link to="/find">Find Friends</Link>
             <br/>
-            <a>Manage Profile</a>
+            <Link to="/manage">Manage Profile</Link>
             <br/>
-            <a>Current Friends</a>
+            <Link to="/">Current Friends</Link>
+            <br/>
+            <Link to="/home">Homepage</Link>
         </div>
     );
 }

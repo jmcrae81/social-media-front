@@ -3,15 +3,23 @@ import './App.css';
 import LoginComponent from './LoginComponent';
 import RegistrationComponent from './RegistrationComponent';
 import HomepageComponent from './HomepageComponent';
-import PostComponent from './PostComponent';
 import NavbarComponent from './NavbarComponent';
+import ManageProfileComponent from './ManageProfileComponent';
+import FindFriendsComponent from './FindFriendsComponent';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-        <PostComponent/>
-        <NavbarComponent/>
-    </div>
+    <Router>
+        <div className="app">
+            <NavbarComponent/>
+        </div>
+        <Routes>
+            <Route path="/find" element={ <FindFriendsComponent/>} />
+            <Route path="/manage" element={<ManageProfileComponent/>} />
+            <Route path="/home" element={<HomepageComponent/>} />
+        </Routes>
+    </Router>
   );
 }
 
