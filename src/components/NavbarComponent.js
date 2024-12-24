@@ -13,6 +13,8 @@ const NavbarComponent = () => {
             <br/>
             <br/>
             <Link to="/home">Homepage</Link>
+            <br/>
+            <Link to="/login">Log Off</Link>
         </div>
     );
 }

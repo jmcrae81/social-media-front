@@ -14,7 +14,7 @@ function App() {
              <Route path="/" element={<LoginComponent />} />
              <Route path="/login" element={<LoginComponent />} />
              <Route path="/dashboard" element={<DashboardComponent />} />
-             <Route path="register" element={<RegistrationComponent />} />
+             <Route path="/register" element={<RegistrationComponent />} />
         </Routes>
     </Router>
   );
