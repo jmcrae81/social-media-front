@@ -1,8 +1,8 @@
 const FriendsComponent = () => {
    return(
           <div style={{textAlign: "center"}}>
-              <h1>Your current friends will be displayed on this page</h1>
-              <p>.......after you add them......of course</p>
+              <h1>Will the hero go alone?</h1>
+              <p>The hero is never alone!!!</p>
           </div>
       );
 }

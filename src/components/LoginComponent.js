@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import AuthService from '../AuthService';
+import HomepageComponent from './HomepageComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const LoginComponent = () =>{
@@ -15,7 +16,7 @@ const LoginComponent = () =>{
                 const response = await AuthService.login({ username, password });
                 if (response.data !== 'Invalid credentials') {
                     localStorage.setItem('token', response.data);
-                    navigate('/dashboard');
+                    navigate('/home');
                 } else {
                     setMessage('Invalid credentials');
                 }
