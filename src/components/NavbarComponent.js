@@ -3,7 +3,8 @@ import {Link} from "react-router-dom"
 
 const NavbarComponent = () => {
     return(
-        <div class="sidebar">
+        <div className="sidebar">
+          <div className="links">
             <p>Links will be over here</p>
             <Link to="/find">Find Friends</Link>
             <br/>
@@ -15,6 +16,7 @@ const NavbarComponent = () => {
             <Link to="/home">Homepage</Link>
             <br/>
             <Link to="/login">Log Off</Link>
+          </div>
         </div>
     );
 }
