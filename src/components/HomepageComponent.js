@@ -1,5 +1,4 @@
 import PostComponent from './PostComponent';
-import AddPostComponent from './AddPostComponent';
 import NavbarComponent from './NavbarComponent';
 import DisplayPostComponent from './DisplayPostComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,8 +16,15 @@ const HomepageComponent = () => {
     }, [])
 
     const createNewPost = () => {
-        alert("In createNewPost");
-        <AddPostComponent posts={posts}/>
+        let userId = "9996";
+        let messageText = "Another Hardcoded message";
+        let tpEpoch = 1679955599;
+
+        let messageBody = {"postedBy": userId, "messageText": messageText
+                                , "timePostedEpoch": tpEpoch};
+        axios.post("http://localhost:8080/messages", messageBody)
+                            .then(response=>{
+                            console.log(response)});
     }
 
     return(
@@ -32,9 +38,10 @@ const HomepageComponent = () => {
                 <input type="text" id="newPostBox" value={postBoxText}
                   onChange={ (e) => setText(e.target.value)}/>
                 <br/>
-                <button type="button" className="btn btn-primary" onClick={() => createNewPost}>Post</button>
+                <button type="button" className="btn btn-primary" onClick={() => createNewPost()}>Post</button>
                </form>
             <DisplayPostComponent posts={posts}/>
+
 
            </div>
 
