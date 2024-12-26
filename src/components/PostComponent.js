@@ -1,7 +1,7 @@
 import CommentComponent from './CommentComponent';
 import {useState} from "react";
 
-const PostComponent = () => {
+const PostComponent = (props) => {
      const [comments, addComments] = useState([
         {commentText: "Frozone! You can't escape from The UnderMiner! I am beneath you all! But nothing is beneath me!", commentAuthor: "The UnderMiner"},
         {commentText: "I will exact Justice upon The Underminer!", commentAuthor: "Mr. Incredible"}
