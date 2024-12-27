@@ -1,16 +1,27 @@
-import axios from 'axios';
 
-const API_BASE_URL = "http://localhost:8080/login";
+
+const API_LOGIN_URL = "http://localhost:8080/login";
+const API_SESSION_URL = "http://localhost:8080/session/create";
 
 class AuthService {
     login(credentials) {
-        return axios.post('http://localhost:8080/api/login', credentials, {
-                                                                 headers: {
-                                                                   'Content-Type': 'application/json', // Ensure headers match server configuration
-                                                                 },
-                                                                 withCredentials: true, // Only if cookies or authentication are involved
-                                                               });
-;
+
+    let username = credentials.username;
+    let password = credentials.password;
+
+    return(
+
+       fetch(API_LOGIN_URL, { method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                "username": username,
+                                "password": password
+                              })
+       })
+
+    );
     }
 }
 

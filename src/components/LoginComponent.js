@@ -15,8 +15,9 @@ const LoginComponent = () =>{
             e.preventDefault();
             try {
                 const response = await AuthService.login({ username, password });
+                console.log("Response: " + response);
                 if (response.data !== 'Invalid credentials') {
-                    localStorage.setItem('token', response.data);
+                    localStorage.setItem('sessionId', response.data);
                     navigate('/home');
                 } else {
                     setMessage('Invalid credentials');
